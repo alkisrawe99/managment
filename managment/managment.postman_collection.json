@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "aec63a2e-30a8-4b66-af67-d4413b3fb3fa",
+		"name": "managment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18926833"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create_user?name=alaa&email=al@a.a&password=123456&confirm-password=123456&roles=hr",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create_user"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "alaa"
+						},
+						{
+							"key": "email",
+							"value": "al@a.a"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						},
+						{
+							"key": "confirm-password",
+							"value": "123456"
+						},
+						{
+							"key": "roles",
+							"value": "hr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_user?id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destroy user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/destroy?id=4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destroy"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update?id=5&name=alaa&email=al@a.a&roles=hr",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "name",
+							"value": "alaa"
+						},
+						{
+							"key": "email",
+							"value": "al@a.a"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "confirm-password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "roles",
+							"value": "hr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create_task?name=find employee&deadline=2023-02-07&dep_name=hr",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create_task"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "find employee"
+						},
+						{
+							"key": "deadline",
+							"value": "2023-02-07"
+						},
+						{
+							"key": "dep_name",
+							"value": "hr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_task?id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_task"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update_task?id=1&name=find employee&deadline=2023-02-08&dep_name=hr&status=incomplete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update_task"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "name",
+							"value": "find employee"
+						},
+						{
+							"key": "deadline",
+							"value": "2023-02-08"
+						},
+						{
+							"key": "dep_name",
+							"value": "hr"
+						},
+						{
+							"key": "status",
+							"value": "incomplete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destroy_task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/destroy_task?id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destroy_task"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_task_status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update_task_status?id=1&status=complete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update_task_status"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "status",
+							"value": "complete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create_role?name=sub_admin&permission[0]=create_task&permission[1]=update_task&permission[2]=delete_task&permission[3]=show_tasks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create_role"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "sub_admin"
+						},
+						{
+							"key": "permission[0]",
+							"value": "create_task"
+						},
+						{
+							"key": "permission[1]",
+							"value": "update_task"
+						},
+						{
+							"key": "permission[2]",
+							"value": "delete_task"
+						},
+						{
+							"key": "permission[3]",
+							"value": "show_tasks"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_task by department",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_task_dep?dep=hr",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_task_dep"
+					],
+					"query": [
+						{
+							"key": "dep",
+							"value": "hr"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
